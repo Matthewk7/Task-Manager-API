@@ -37,8 +37,8 @@ components:
   securitySchemes:
     bearerAuth:
       type: apiKey
-      schema: Bearer
-      bearerFormat: header
+      in: header
+      name: Bearer
 
 paths:
   /users:
