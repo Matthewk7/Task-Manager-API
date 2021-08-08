@@ -264,7 +264,7 @@ paths:
       requestBody:
         $ref: '#/components/requestBodies/Task'
       responses:
-        200:
+        201:
           description: Task Created
           content:
             application/json:
@@ -312,7 +312,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/Task'
 
-  /tasks/:id:
+  /tasks/{id}:
     get:
       summary: Read a Task
       tags: [Task]
