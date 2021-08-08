@@ -62,11 +62,45 @@
 
 ## Usage
 
+### User
+
 To get started select the create user endpoint **/users**.
 
 This will allow you to create a user login and profile that is stored in the database.
 
 ![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Create_User.png?raw=true)
+
+Select **Try it out** to test the endpoint.
+
+You must enter your account data in the request body.
+
+**Note:** the sample body may not work if it is already an account in the database
+
+After you execute the **GET** request, a **201** response will be returned if the user was successfully created.
+
+![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/User_Created.png?raw=true)
+
+In order to authenticate the endpoints that would need a user to login, copy the token string in the response and enter it into the Authorize button at the beginning of the page.
+
+![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Authorize.png?raw=true)
+
+Now you are able to test any other user enpoints. Be sure to include any response bodies or parameters that are neccessary shown by the documentation.
+
+**Note:** If the user is logged out, you must login again and replace the token with the updated token in order to authenticate.
+
+### Tasks
+
+When logged in, you can create and manager tasks for a user. Select Create a task endpoint **POST /tasks** to get started.
+
+![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Create_Task.png?raw=true)
+
+Be sure to provide the neccessary response body.
+
+When the task is created, copy the the task id value **\_id**. This value will be used to delete and update a specific task.
+
+You can check all of the users tasks by running **GET /tasks**.
+
+When deleting and updating a specific task, provide the task id you got from creating a task or reading all tasks in the **Task ID** parameter.
 
 ## Contact
 
