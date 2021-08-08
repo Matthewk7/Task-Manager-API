@@ -36,9 +36,10 @@ components:
           example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTBmOGZiZmNhYWEzMjAwMTUyYWIwMmMiLCJpYXQiOjE2Mjg0MDk3OTF9.dUaSzU_3Hcv1KeH5EAQX1ELH6omXx7vXCNHFcJRBVns
   securitySchemes:
     bearerAuth:
-      type: apiKey
+      type: http
+      bearerFormat: JWT
       in: header
-      name: Bearer
+      name: Authorizaiton: 
 
 paths:
   /users:
