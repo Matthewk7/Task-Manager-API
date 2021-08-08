@@ -1,6 +1,39 @@
 components:
   parameters:
   requestBodies:
+    updateUser:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                example: John Doe
+              email:
+                type: string
+                example: john@example.com
+              password:
+                type: string
+                example: example123
+              age:
+                type: int
+                example: 20
+    Task:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              description:
+                type: string
+                example: Clean the house
+                required: true
+              completed:
+                type: boolean
+                example: false
   responses:
 
   schemas:
@@ -34,6 +67,58 @@ components:
         token:
           type: string
           example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTBmOGZiZmNhYWEzMjAwMTUyYWIwMmMiLCJpYXQiOjE2Mjg0MDk3OTF9.dUaSzU_3Hcv1KeH5EAQX1ELH6omXx7vXCNHFcJRBVns
+    UserData:
+      type: object
+      properties:
+        user:
+          type: object
+          properties:
+            age:
+              type: string
+              example: 20
+            _id:
+              type: string
+              example: 610f8ed3caaa3200152ab022
+            name:
+              type: string
+              example: John Doe
+            email:
+              type: string
+              example: example@example.com
+            createdAt:
+              type: string
+              example: 2021-08-08T08:03:11.740Z
+            updatedAt:
+              type: string
+              example: 2021-08-08T08:03:11.905Z
+            __v:
+              type: int
+              example: 1
+    Task:
+      type: object
+      properties:
+        completed:
+          type: boolean
+          example: false
+        _id:
+          type: string
+          example: 610fa256cc71130015583901
+        description:
+          type: string
+          example: Clean the house
+        owner:
+          type: string
+          example: 610fa24dcc711300155838f9
+        createdAt:
+          type: string
+          example: 2021-08-08T08:03:11.740Z
+        updatedAt:
+          type: string
+          example: 2021-08-08T08:03:11.905Z
+        __v:
+          type: int
+          example: 1
+
   securitySchemes:
     bearerAuth:
       type: http
@@ -108,10 +193,164 @@ paths:
   /users/logout:
     post:
       summary: Logout
-      tage: [User]
+      tags: [User]
       description: Logout of a user's account
       security:
         - bearerAuth: []
       responses:
         200:
           description: Logout Successful
+          content:
+
+  /users/logoutAll:
+    post:
+      summary: Logout all
+      tags: [User]
+      description: Logout user on all machines
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: All Logouts Successful
+
+  /users/me:
+    get:
+      summary: Read Profile
+      tags: [User]
+      description: Get profile information
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          descpription: Profile data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserData'
+
+    patch:
+      summary: Update User
+      tags: [User]
+      description: Update user profile information
+      security:
+        - bearerAuth: []
+      requestBody:
+        $ref: '#/components/requestBodies/updateUser'
+      responses:
+        200:
+          description: User Updated
+
+    delete:
+      summary: Delete User
+      tags: [User]
+      description: Delete a user
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: User Deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserData'
+
+  /tasks:
+    post:
+      summary: Create a Task
+      tags: [Task]
+      description: Create a Task
+      security:
+        - bearerAuth: []
+      requestBody:
+        $ref: '#/components/requestBodies/Task'
+      responses:
+        200:
+          description: Task Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+
+    get:
+      summary: Read tasks
+      tags: [Task]
+      description: Read all of a users tasks
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            default: createdAt_desc
+          description: Sort tasks by ascending or descending (asc, desc)
+        - in: query
+          name: completed
+          schema:
+            type: boolean
+            default: false
+          description: Sort tasks by completed or not (true, false)
+        - in: query
+          name: limit
+          schema:
+            type: int
+            default: 4
+          description: Limit the number of responses
+        - in: query
+          name: skip
+          schema:
+            type: int
+            default: 0
+          description: Skip a number of responses
+      responses:
+        200:
+          description: Task Created
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+
+  /tasks/:id:
+    get:
+      summary: Read a Task
+      tags: [Task]
+      description: Read a specific Task
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            exmaple: 610fa256cc71130015583901
+          description: Task ID
+      responses:
+        200:
+          description: Task Details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+
+    delete:
+      summary: Delete a Task
+      tags: [Task]
+      description: Delete a specific Task
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            exmaple: 610fa256cc71130015583901
+          description: Task ID
+      responses:
+        200:
+          description: Task Deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
