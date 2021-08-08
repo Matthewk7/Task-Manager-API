@@ -110,3 +110,6 @@ paths:
       description: Logout of a user's account
       security:
         - bearerAuth: []
+      responses:
+        200:
+          description: Logout Successful
