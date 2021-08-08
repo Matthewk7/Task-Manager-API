@@ -25,7 +25,7 @@
   <h3 align="center">Task Manager API</h3>
 
   <p align="center">
-    API to manage tasks with the ability to create and login as a user then create tasks and update them as they are completed and view all of them
+    API to manage tasks with the ability to create and login as a user then create tasks and manage both users and tasks
     <br />
   </p>
 </p>
@@ -40,17 +40,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -72,12 +62,6 @@ Here's a blank template to get started:
 - [MongoDB](https://www.mongodb.com)
 - [Heroku](https://www.heroku.com)
 
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
 <!-- USAGE EXAMPLES -->
 
 ## Usage
@@ -85,14 +69,6 @@ To get a local copy up and running follow these simple steps.
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-<!-- CONTACT -->
 
 ## Contact
 
