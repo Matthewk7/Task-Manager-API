@@ -12,6 +12,14 @@ app.use(express.json());
 app.use(userRouter);
 app.use(taskRouter);
 
+// Require OpenAPI
+const swagger = require('../swagger/swagger.js');
+app.use(
+  '*/api-docs',
+  swagger.swaggerUI.serve,
+  swagger.swaggerUI.setup(swagger.swaggerDocs, { explorer: true }),
+);
+
 app.listen(port, () => {
   console.log('Server is up on port', port);
 });
