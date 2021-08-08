@@ -51,42 +51,25 @@
 
 ![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Project_Image.png?raw=true)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`Matthewk7`, `Task-Manager-API`, `twitter_handle`, `matthewjkale@gmail.com`, `Task Manager API`, `project_description`
-
 ### Built With
 
 - [Nodejs](https://nodejs.org/en/)
 - [MongoDB](https://www.mongodb.com)
 - [Heroku](https://www.heroku.com)
+- [OpenAPI](https://www.openapis.org)
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To get started select the create user endpoint **/users**.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+This will allow you to create a user login and profile that is stored in the database.
+
+![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Create_User.png?raw=true)
 
 ## Contact
 
 Matthew Kale - [Email](matthewjkale@gmail.com)
 
 Project Link: [https://github.com/Matthewk7/Task-Manager-API](https://github.com/Matthewk7/Task-Manager-API)
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
