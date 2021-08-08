@@ -49,7 +49,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Project_Image.png)
+![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Project_Image.png?raw=true)
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
