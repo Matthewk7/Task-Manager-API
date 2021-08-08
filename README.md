@@ -62,6 +62,8 @@
 
 ## Usage
 
+Visit the API Documentation [HERE](https://kale-tasks-manager.herokuapp.com/api-docs/).
+
 ### User
 
 To get started select the create user endpoint **/users**.
