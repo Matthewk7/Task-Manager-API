@@ -1,39 +1,49 @@
-# components:
-#   parameters:
-#   requestBodies:
-#   responses:
-#     success:
-#       description: Object returned with OK
-#       content:
-#         application/json:
-#           schema:
-#             type: object
-#             properties:
-#               data:
-#                 type: string
-#                 example: ok
-#     error:
-#       description: Object returned with error
-#       content:
-#         application/json:
-#           schema:
-#             type: object
-#             properties:
-#               data:
-#                 type: string
-#                 example: Error message
-#   securitySchemes:
-#     auth:
-#       type: apiKey
-#       in: header
-#       name: Authorization
+components:
+  parameters:
+  requestBodies:
+  responses:
+
+  schemas:
+    User:
+      type: object
+      properties:
+        user:
+          type: object
+          properties:
+            age:
+              type: string
+              example: 20
+            _id:
+              type: string
+              example: 610f8ed3caaa3200152ab022
+            name:
+              type: string
+              example: John Doe
+            email:
+              type: string
+              example: example@example.com
+            createdAt:
+              type: string
+              example: 2021-08-08T08:03:11.740Z
+            updatedAt:
+              type: string
+              example: 2021-08-08T08:03:11.905Z
+            __v:
+              type: int
+              example: 1
+        token:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTBmOGZiZmNhYWEzMjAwMTUyYWIwMmMiLCJpYXQiOjE2Mjg0MDk3OTF9.dUaSzU_3Hcv1KeH5EAQX1ELH6omXx7vXCNHFcJRBVns
+  securitySchemes:
+    bearerAuth:
+      type: apiKey
+      name: Bearer
+      bearerFormat: header
 
 paths:
   /users:
     post:
       summary: Create a user
-      # security:
-      # - auth: []
       tags: [User]
       description: Create a user account
       requestBody:
@@ -57,40 +67,46 @@ paths:
                   required: true
                 password:
                   type: string
-                  example: examplePassword
+                  example: example123
                   required: true
       responses:
         201:
-          description: Account created
+          description: User Created
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  user:
-                    type: object
-                    properties:
-                      age:
-                        type: string
-                        example: 20
-                      _id:
-                        type: string
-                        example: 610f8ed3caaa3200152ab022
-                      name:
-                        type: string
-                        example: John Doe
-                      email:
-                        type: string
-                        example: example@example.com
-                      createdAt:
-                        type: string
-                        example: 2021-08-08T08:03:11.740Z
-                      updatedAt:
-                        type: string
-                        example: 2021-08-08T08:03:11.905Z
-                      __v:
-                        type: int
-                        example: 1
-                  token:
-                    type: string
-                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTBmOGZiZmNhYWEzMjAwMTUyYWIwMmMiLCJpYXQiOjE2Mjg0MDk3OTF9.dUaSzU_3Hcv1KeH5EAQX1ELH6omXx7vXCNHFcJRBVns
+                $ref: '#/components/schemas/User'
+
+  /users/login:
+    post:
+      summary: Login
+      tags: [User]
+      description: Login to a user's account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: john@example.com
+                password:
+                  type: string
+                  example: example123
+      responses:
+        200:
+          description: Login Successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+  /users/logout:
+    post:
+      summary: Logout
+      tage: [User]
+      description: Logout of a user's account
+      security:
+        - bearerAuth: []
