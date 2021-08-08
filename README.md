@@ -23,11 +23,6 @@
 <br />
 <p align="center">
   <h3 align="center">Task Manager API</h3>
-
-  <p align="center">
-    API to manage tasks with the ability to create and login as a user then create tasks and manage both users and tasks
-    <br />
-  </p>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -48,6 +43,8 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+
+API to manage tasks with the ability to create and login as a user then create tasks and manage both users and tasks
 
 ![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Project_Image.png?raw=true)
 
