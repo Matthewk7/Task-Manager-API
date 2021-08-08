@@ -7,7 +7,7 @@
 ***
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, Task-Manager-API, twitter_handle, email, project_title, project_description
+*** github_username, Task-Manager-API, twitter_handle, matthewjkale@gmail.com, Task Manager API, project_description
 -->
 
 <!-- PROJECT SHIELDS -->
@@ -19,33 +19,14 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Matthewk7/Task-Manager-API">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">project_title</h3>
+  <h3 align="center">Task Manager API</h3>
 
   <p align="center">
-    project_description
+    API to manage tasks with the ability to create and login as a user then create tasks and update them as they are completed and view all of them
     <br />
-    <a href="https://github.com/Matthewk7/Task-Manager-API"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Matthewk7/Task-Manager-API">View Demo</a>
-    ·
-    <a href="https://github.com/Matthewk7/Task-Manager-API/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Matthewk7/Task-Manager-API/issues">Request Feature</a>
   </p>
 </p>
 
@@ -83,7 +64,7 @@
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`Matthewk7`, `Task-Manager-API`, `twitter_handle`, `email`, `project_title`, `project_description`
+`Matthewk7`, `Task-Manager-API`, `twitter_handle`, `matthewjkale@gmail.com`, `Task Manager API`, `project_description`
 
 ### Built With
 
@@ -115,7 +96,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Matthew Kale - Email (matthewjkale@gmail.com)
+Matthew Kale - [Email](matthewjkale@gmail.com)
 
 Project Link: [https://github.com/Matthewk7/Task-Manager-API](https://github.com/Matthewk7/Task-Manager-API)
 
