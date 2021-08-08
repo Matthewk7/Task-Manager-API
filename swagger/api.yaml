@@ -38,8 +38,9 @@ components:
     bearerAuth:
       type: http
       bearerFormat: JWT
+      scheme: bearer
       in: header
-      name: Authorizaiton: 
+      name: Authorizaiton
 
 paths:
   /users:
