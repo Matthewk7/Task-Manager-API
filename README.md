@@ -63,13 +63,13 @@ Visit the API Documentation [HERE](https://kale-tasks-manager.herokuapp.com/api-
 
 ### User
 
-To get started select the create user endpoint **/users**.
+To get started click on the "Create a user" endpoint **/users**.
 
 This will allow you to create a user login and profile that is stored in the database.
 
 ![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Create_User.png?raw=true)
 
-Select **Try it out** to test the endpoint.
+Click on **Try it out** to test the endpoint.
 
 You must enter your account data in the request body.
 
@@ -79,21 +79,21 @@ After you execute the **GET** request, a **201** response will be returned if th
 
 ![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/User_Created.png?raw=true)
 
-In order to authenticate the endpoints that would need a user to login, copy the token string in the response and enter it into the Authorize button at the beginning of the page.
+In order to authenticate the endpoints that would need a user to login, copy the token string inside the quotes in the response body, click on the Authorize button at the upper right hand corner of the page and enter the copied token into the value field.
 
 ![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Authorize.png?raw=true)
 
-Now you are able to test any other user enpoints. Be sure to include any response bodies or parameters that are neccessary shown by the documentation.
+Now you are able to test the other user enpoints such as **GET or PATCH /users/me**. Be sure to include any response bodies or parameters that are neccessary shown by the documentation.
 
 **Note:** If the user is logged out, you must login again and replace the token with the updated token in order to authenticate.
 
 ### Tasks
 
-When logged in, you can create and manager tasks for a user. Select Create a task endpoint **POST /tasks** to get started.
+When logged in, you can create and manage tasks for a user. Click on the "Create a task" endpoint **POST /tasks** to get started.
 
 ![alt text](https://github.com/Matthewk7/Task-Manager-API/blob/main/img/Create_Task.png?raw=true)
 
-Be sure to provide the neccessary response body.
+Click **Try it out**. Be sure to provide the neccessary response body. Click execute when done.
 
 When the task is created, copy the the task id value **\_id**. This value will be used to delete and update a specific task.
 
